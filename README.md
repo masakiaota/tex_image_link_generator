@@ -1,6 +1,7 @@
 # tex_image_link_generator
-generate `<img src="https://render.githubusercontent.com/render/math?math={tex}">
-`
+
+Visit here
+https://tex-image-link-generator.herokuapp.com/
 
 ### What's this?
 
