@@ -69,3 +69,10 @@ T = st.text_area(label='https://render.githubusercontent.com/render/math?math=',
 'result'
 T_unquote = parse.unquote_plus(T)
 st.code(T_unquote, language='')
+
+
+# reference
+''
+''
+''
+'Project repository https://github.com/masakiaota/tex_image_link_generator'
