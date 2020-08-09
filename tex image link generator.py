@@ -38,16 +38,16 @@ md_suffix = ')'
 
 MD = md_prefix + URL + md_suffix
 
-'## Image Preview'
 
+'## Image Preview'
 st.markdown(TAG, unsafe_allow_html=True)
 
-
-# st.code(URL)
 '## HTML'
 st.code(TAG, language='html')
+
 '## Markdown'
 st.code(MD, language='')
+# st.code(URL)
 
 
 # 'メモ書き'
