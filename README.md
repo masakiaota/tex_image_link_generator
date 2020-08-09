@@ -9,7 +9,6 @@ Now, you can use <img src="https://render.githubusercontent.com/render/math?math
 
 
 ![](img/generator.png)
-![](img/decoder.png)
 
 
 
