@@ -38,13 +38,13 @@ md_suffix = ')'
 
 MD = md_prefix + URL + md_suffix
 
-'preview'
+'## preview'
 
 st.markdown(TAG, unsafe_allow_html=True)
 ''
 ''
 
-'result'
+'## result'
 
 # st.code(URL)
 st.code(TAG, language='html')
