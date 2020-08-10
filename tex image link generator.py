@@ -19,7 +19,7 @@ S = st.text_area(label='Input tex equations',
 
 # display styleを個々に追加したい
 style_dict = {'default': '\displaystyle ',
-              'inline': '\textstyle '}
+              'inline': '\\textstyle '}
 style_prefix = style_dict[
     st.selectbox('Select style', list(style_dict.keys()))]
 
