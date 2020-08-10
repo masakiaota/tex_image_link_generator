@@ -13,18 +13,28 @@ text_area_height = 220
 
 # input
 st.title('tex image link generator')
-S = st.text_area(label='input tex commands',
+S = st.text_area(label='Input tex equations',
                  value=S_default_value,
                  height=text_area_height)
-size_list = ['M', 'L', '2L', '3L', '4L', '5L']
-size = st.selectbox('size?', size_list)
 
-size_prefix = ['', '\large ', '\Large ', '\LARGE ',
-               '\huge ', '\Huge '][size_list.index(size)]
+# display styleを個々に追加したい
+style_dict = {'default': '\displaystyle ',
+              'inline': '\textstyle '}
+style_prefix = style_dict[
+    st.selectbox('Select style', list(style_dict.keys()))]
+
+size_dict = {'M': '',
+             'L': '\large ',
+             '2L': '\Large ',
+             '3L': '\LARGE ',
+             '4L': '\huge ',
+             '5L': '\Huge '}
+
+size_prefix = size_dict[st.selectbox('Select size', list(size_dict.keys()))]
 
 
 # encode
-S_quote = parse.quote_plus(size_prefix + S)
+S_quote = parse.quote_plus(size_prefix + style_prefix + S)
 
 url_prefix = 'https://render.githubusercontent.com/render/math?math='
 URL = url_prefix + S_quote
