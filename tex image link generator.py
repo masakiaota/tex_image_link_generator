@@ -16,11 +16,15 @@ st.title('tex image link generator')
 S = st.text_area(label='input tex commands',
                  value=S_default_value,
                  height=text_area_height)
-size_list = ['M', 'L', '2L', '3L', '4L', '5L']
-size = st.selectbox('size?', size_list)
 
-size_prefix = ['', '\large ', '\Large ', '\LARGE ',
-               '\huge ', '\Huge '][size_list.index(size)]
+size_dict = {'M': '',
+             'L': '\large ',
+             '2L': '\Large ',
+             '3L': '\LARGE ',
+             '4L': '\huge ',
+             '5L': '\Huge '}
+
+size_prefix = size_dict[st.selectbox('size?', list(size_dict.keys()))]
 
 
 # encode
