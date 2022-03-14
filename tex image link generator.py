@@ -32,9 +32,13 @@ size_dict = {'M': '',
 
 size_prefix = size_dict[st.selectbox('Select size', list(size_dict.keys()))]
 
+color_dict = {'black': '\color{black}',
+             'white': '\color{white}'}
+
+color_prefix = color_dict[st.selectbox('Select color', list(color_dict.keys()))]
 
 # encode
-S_quote = parse.quote_plus(size_prefix + style_prefix + S)
+S_quote = parse.quote_plus(color_prefix + size_prefix + style_prefix + S)
 
 url_prefix = 'https://render.githubusercontent.com/render/math?math='
 URL = url_prefix + S_quote
